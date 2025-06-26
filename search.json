@@ -1,9 +1,16 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Graph",
+    "section": "",
+    "text": "This dataset shows standardized median household income by racial group across New York City census tracts. The values have been normalized (mean = 0, SD = 1) to allow for easy comparison of income distribution patterns between racial groups, without being skewed by overall income levels. It’s designed to highlight structural income disparities across communities."
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "This dataset shows standardized median household income by racial group across New York City census tracts. The values have been normalized (mean = 0, SD = 1) to allow for easy comparison of income distribution patterns between racial groups, without being skewed by overall income levels. It’s designed to highlight structural income disparities across communities."
+    "text": "This site was created by Ali Ahmad during her practice session for Kane’s Data Science Bootcamp"
   }
 ]
