@@ -1,0 +1,47 @@
+---
+title: "Data Graph"
+author: "Ali Ahmad"
+execute: 
+  echo: false
+  message: false
+  warning: false
+ 
+---
+
+```{r}
+library(tidyverse)
+x <- read.csv("data/nyc_tracts.csv")
+```
+
+```{r}
+# Load libraries
+library(tidyverse)
+
+# Simulated example data
+df <- tibble(
+  Race = rep(c("Asian", "Black", "Hispanic", "White"), each = 5),
+  Median_Income = c(
+    60000, 70000, 80000, 90000, 100000,     # Asian
+    50000, 60000, 70000, 80000, 90000,      # Black
+    40000, 50000, 60000, 70000, 80000,      # Hispanic
+    100000, 110000, 120000, 130000, 140000  # White
+  )
+)
+
+# Scale the median income
+df_scaled <- df %>%
+  mutate(Scaled_Income = scale(Median_Income))
+
+# Plot the scaled income using ggplot2
+ggplot(df_scaled, aes(x = Race, y = Scaled_Income)) +
+  geom_boxplot(fill = "skyblue", color = "black") +
+  labs(
+    title = "NYC Census Tracts",
+    subtitle = "Standardized Median Income Distribution by Race",
+    x = "Race",
+    y = "Scaled Median Income"
+  ) +
+  theme_minimal()
+
+```
+
